@@ -1,0 +1,140 @@
+/*p{
+    color: #83adce;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-align: center;
+    font-family: cursive;
+}
+
+#square{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    margin: auto;
+    margin-top: 112px;
+    margin-bottom: 150px;
+    border: 5px solid blue;
+}
+
+.blue-words{
+    color: blue;
+}*/
+
+
+.welcome-banner {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    background-color: beige;
+    padding: 15px;
+    border: 2px solid #ff5722;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.welcome-banner > p{
+    color: #ff9800;
+}
+
+.welcome-banner > h1 {
+    color: #ff5722;
+}
+
+
+.welcome-banner:hover{
+    background-color: #ff5722;
+    border: 2px solid beige;
+}
+
+.welcome-banner:hover > h1 {
+    color: beige;
+}
+
+.welcome-banner:hover > p{
+    color: beige;
+}
+
+
+
+.action-banner{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 80px;
+    border: 2px solid #ff5722;
+    padding: 25px;
+    border-radius: 7px;
+}
+
+.action-banner > a {
+    text-decoration: none;
+    color: #ff5722;
+    font-size: 20px;
+    background-color: beige;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.form-group{
+    width: 100%;
+    text-align: left;
+    margin-bottom: 15px;
+}
+.form-group > label{
+    font-size: 18px;
+    font-weight: bold;
+}
+.form-group > input{
+    font-size: 18px;
+    width: calc( 100% - 14px );
+    padding: 13px;
+    border-radius: 7px;
+    border-color: #ff5722;
+    outline: none;
+    
+}
+
+.form-group > button {
+    border: 0;
+    background-color: #ff5722;
+    padding: 15px;
+    border-radius: 7px;
+    color: white;
+}
+
+.btn{
+    border: 0;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.btn-primary{
+    background-color: #03a9f4;
+    color: white;
+}
+
+.btn-secondary{
+    background-color: #a803f4;
+    color: white;
+}
+
+.floating{
+    transition: box-shadow 0.1s;
+}
+
+.floating:hover{
+    box-shadow: 1px 5px 8px -1px black;
+}
+
+.btn-circle{
+    border-radius: 50%;
+}
+
+.btn-empty{
+    background-color: unset;
+    color: #03a9f4;
+    border: 1px solid #03a9f4;
+}

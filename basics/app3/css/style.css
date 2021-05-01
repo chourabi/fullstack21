@@ -1,0 +1,225 @@
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+.page-header{
+    background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2021-land-rover-range-rover-mmp-1-1595011892.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.page-header > h1 {
+    margin: 0;
+    padding-top: 50vh;
+    padding-left: 50px;
+    color: white;
+    font-size: 53px;
+    font-family: sans-serif;
+}
+
+.btns-home{
+    padding-left: 50px;
+    margin-top: 15px;
+}
+
+
+.btn{
+    text-decoration: none;
+
+    padding: 15px 35px 15px 35px;
+    border-radius: 30px;
+}
+
+.btn-primary{
+    background-color: #3c95c1;
+    color: white;
+}
+
+.btn-secondary{
+    background-color: white;
+    color: #3c95c1;
+}
+
+.page-header > nav{
+    text-align: right;
+    padding-top: 15px;
+}
+
+.page-header > nav > div {
+    display: inline-block;
+    
+}
+.page-header > nav > div > a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    transition: color 0.3s;
+    
+}
+
+.sub-menus{
+    position: relative;
+    height: 150px;
+}
+
+
+
+
+.page-header > nav > div > ul{
+    position: absolute;
+    left: 0;
+    list-style: none;
+    padding: 0;
+    width: 150px;
+    text-align: left;
+    background-color: white;
+    padding: 7px;
+    transition: all 0.3s;
+    display: none;
+}
+
+
+.sub-menus:hover ul{
+    display: block;
+
+}
+
+.page-header > nav > a:hover{
+    color: #3c95c1;
+    
+}
+
+.page-header > nav{
+    height: 50px;
+    background-image: url(https://logodownload.org/wp-content/uploads/2019/08/land-rover-logo.png);
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@keyframes animate-bg {
+    0% { background-position: -102vw; opacity: 0.1; }
+    100% { background-position: center; opacity: 1;}
+}
+
+.page-header{
+    animation: animate-bg;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+}
+
+.page-header{
+    margin-bottom: 100px;
+}
+
+.bg-red{
+    background-color: red;
+}
+.bg-blue{
+    background-color: blue;
+}
+
+
+.col{
+    width: 50%;
+    float: left;
+}
+
+.col-3{
+    width: 25%;
+    float: left;
+}
+
+
+.col-4{
+    width: calc( 33.33% - 30px );
+    float: left;
+}
+
+.conatiner{
+    width: 80%;
+    margin: auto;
+}
+
+.article{
+    padding: 15px;
+    
+}
+
+@keyframes article-fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+    
+}
+
+.artice-a{
+    animation: article-fade-in 1s  1;
+}
+.artice-b{
+    animation: article-fade-in 2s  1;
+}
+.artice-c{
+    animation: article-fade-in 3s  1;
+}
+
+.col-8{
+    width: 66.66%;
+    float: left;
+}
+
+.inline-arilce{
+    position: relative;
+    
+    margin-bottom: 15px;
+    height: 170px;
+
+}
+.inline-arilce > img{
+    position: absolute;
+    top: 21px;
+}
+.article-content{
+    display: inline-block;
+    position: absolute;
+    left: 115px;
+    top: 0;
+}
+
+
+.content{
+    
+    display: inline-block;
+    width: 100%;
+
+}
+
+.side-menu{
+    padding: 10px;
+    border: 1px solid #3c95c1;
+    margin-top: 15px;
+    border-radius: 8px;
+
+}
+
+.form-control{
+    width: 100%;
+    padding: 11px;
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 15px;
+    border: 0;
+
+}
+
+.categorys > ul{
+    padding: 0;
+    list-style: none;
+}
+
+.categorys > ul > li{
+
+    padding: 10px;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS AUTH</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+
+
+   <div class="container">
+       <h3>Products list</h3>
+
+
+       <button class="btn btn-primary" id="add-btn-top"  >Add new product</button>
+       <hr>
+
+
+       <div id="add-product-form" style="display: none;" >
+        <form id="add-product-form" >
+            <div class="form-group">
+                <label for="">Title</label>
+                <input type="text" class="form-control" id="title">
+            </div>
+            <div class="form-group">
+                <label for="">Code</label>
+                <input type="text" class="form-control" id="code">
+            </div>
+            <div class="form-group">
+                <label for="">Quantity</label>
+                <input type="number" class="form-control" id="quantity">
+            </div>
+            <div class="form-group">
+                <label for="">Price</label>
+                <input type="number" class="form-control" id="price">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-info">Add product</button>
+                <button type="button" class="btn btn-warning" id="cancel-add" >Cancel</button>
+                
+            </div>
+            
+            
+
+        </form>
+       </div>
+
+
+       <div id="products-view">
+        <table class="table table-sm" >
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">CodeRef</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="list-body">
+              
+              
+            </tbody>
+          </table>
+       </div>
+
+
+
+
+   </div>
+    
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

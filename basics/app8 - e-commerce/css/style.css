@@ -1,0 +1,21 @@
+.side-nav{
+    width: 250px;
+    height: 100vh;
+    background-color: #212529;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    transition: all 0.5s ease-in-out;
+}
+
+.side-nav-opned{
+    left: 0;
+}
+
+.content{
+    transition: all 0.5s ease-in-out;
+}
+
+.opened-side-content{
+    padding-left: 250px;
+}

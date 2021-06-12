@@ -1,0 +1,51 @@
+INSERT
+    var MongoClient = require('mongodb').MongoClient;
+    var url = "mongodb://localhost:27017/";
+
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("mytodoapp");
+    var todo = {
+        title:"welcome to mongodb",
+        description:"hello world",
+        status:0
+    }
+
+    dbo.collection("todos").insertOne(todo, function(err, res) {
+        if (err) throw err;
+        console.log("1 document inserted");
+        db.close();
+    });
+    });
+DELETE
+    const params = urlG.parse(req.url,true).query;
+
+    console.log(params);
+
+    const status = params.status;
+
+    var query = {};
+
+    if (status != null) {
+        query.status = parseInt(status);
+
+    }
+
+
+    var MongoClient = require('mongodb').MongoClient;
+    var url = "mongodb://localhost:27017/";
+
+    MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("mytodoapp");
+    
+
+    dbo.collection("todos").deleteMany (query,function(err, result) {
+        if (err) throw err;
+        
+        res.send({ success:true , count:result.result.n })
+        db.close();
+      });
+
+
+    });

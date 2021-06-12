@@ -1,0 +1,5 @@
+install express:( project folder )
+npm install express --save 
+
+install jsonwebtoken:( project folder )
+npm install jsonwebtoken

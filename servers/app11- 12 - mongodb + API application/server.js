@@ -4,6 +4,7 @@ const port = 5000
 var jwt = require('jsonwebtoken');
 var urlG = require('url');
 const { createAccount, auth } = require('./app_modules/AuthModule');
+const { addNewUserTodo, getUserTodos, updateUserTodo, closeTodo, deleteTodo } = require('./app_modules/TodosModules');
 
 
 app.use(function (req, res, next) {
@@ -50,60 +51,30 @@ app.post('/signup', (req, res) => {
   })
   
 
+  app.post("/api/todo/add", (req,res)=>{
+    addNewUserTodo(req,res);
+  })
 
-app.get('/dev', (req, res) => {
+  
+  app.post("/api/todo/update", (req,res)=>{
+    updateUserTodo(req,res);
+  })
 
-    const params = urlG.parse(req.url,true).query;
+  app.post("/api/todo/close", (req,res)=>{
+    closeTodo(req,res);
+  })
 
-    console.log(params);
+  app.post("/api/todo/delete", (req,res)=>{
+    deleteTodo(req,res);
+  })
+  
 
-    const status = params.status;
-
-    var query = {};
-
-    if (status != null) {
-        query.status = parseInt(status);
-
-    }
-
-
-    var MongoClient = require('mongodb').MongoClient;
-    var url = "mongodb://localhost:27017/";
-
-    MongoClient.connect(url, function(err, db) {
-    if (err) throw err;
-    var dbo = db.db("mytodoapp");
-    
-
-    dbo.collection("todos").find(query).toArray(function(err, result) {
-        if (err) throw err;
-        
-        res.send(result)
-        db.close();
-      });
-
-
-    });
-
-
-
-
-
-    
+  app.get("/api/todo/list", (req,res)=>{
+    getUserTodos(req,res);
   })
 
 
-  app.get('/update', (req, res) => {
 
-    
-
-
-    var hashedPassword = passwordHash.generate("123456");
-
-    console.log(hashedPassword);
-
-    res.send("ok")
-  })
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

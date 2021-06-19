@@ -3,15 +3,21 @@ import './App.css';
 import MyDate from './component/DateShow';
 import React from 'react';
 import ProfileCard from './component/ProfileCard';
+import Article from './component/Article';
+
+
 class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
       dates : [
         { day:"02", month:"15", year:"1995" },
-        { day:"03", month:"15", year:"1995" },
-        { day:"04", month:"15", year:"1995" },
-        { day:"05", month:"15", year:"1995" },
+        
+      ],
+
+      articles:[
+        { didLike:true, title:"my first react app", nbrLikes:16, description:"this is my first react app, it's amazing" },
+        { didLike:false, title:"my second react app", nbrLikes:0, description:"this is my second react app, it's amazing" },
         
       ]
     }
@@ -20,6 +26,9 @@ class App extends React.Component {
   render(){
     return (
       <div>
+        {
+          /**
+           * <div>
       <h1>helo world</h1>
 
       <button onClick= {  ()=>{
@@ -49,6 +58,20 @@ class App extends React.Component {
     
 
   </div>
+           */
+        }
+
+
+
+        {
+          this.state.articles.map((a)=>{
+            return <Article didLike={a.didLike} title={a.title} description={a.description} nbrLikes={a.nbrLikes} />; 
+          })
+        }
+
+
+
+      </div>
     );
   }
    
